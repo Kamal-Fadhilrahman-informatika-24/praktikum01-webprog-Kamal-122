@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Web Portofolio Diva Marshelano AS</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Web Portofolio - Nama Anda</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Diva Marshelano AS</h1>
-    <p>Mahasiswa Informatika | Web Programming</p>
-  </header>
+<header>
+    <img src="images/profile.jpg" alt="Foto Profil" class="profile-img">
+    <h1 id="judul">Nama Lengkap Anda</h1>
+    <p>Mahasiswa Teknik Informatika | Web Developer Pemula</p>
+</header>
 
-  <section id="about">
+<nav>
+    <a href="about.html">Next →</a>
+</nav>
+
+<section id="about">
     <h2>About Me</h2>
-    <p>Saya adalah mahasiswa yang sedang mempelajari web programming.</p>
-  </section>
+    <p class="teks">
+        Saya adalah mahasiswa Teknik Informatika yang tertarik pada
+        pengembangan web dan client-side scripting.
+    </p>
+</section>
 
-  <section id="skills">
+<section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+        <li>HTML Dasar</li>
+        <li>CSS Dasar</li>
+        <li>JavaScript Dasar</li>
     </ul>
-  </section>
+</section>
 
-  <section id="projects">
+<section id="projects">
     <h2>Projects</h2>
-    <p>Web Portofolio Sederhana</p>
-  </section>
+    <ul>
+        <li>Website Portofolio</li>
+        <li>Landing Page</li>
+        <li>Form Login</li>
+    </ul>
+</section>
 
-  <section id="contact">
+<section id="contact">
     <h2>Contact</h2>
-    <p>Email: diva@email.com</p>
-  </section>
+    <p>Email: emailanda@gmail.com</p>
+    <button id="btn">Klik Saya</button>
+</section>
 
-  <button onclick="showMessage()">Klik Saya</button>
-
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
