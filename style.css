@@ -9,16 +9,16 @@
 
 body {
     background-color: #bdc3c7; 
-    font-family: 'Open Sans', sans-serif; /* Font untuk isi paragraf */
+    font-family: 'Open Sans', sans-serif; 
     font-size: 16px; 
     line-height: 1.6; 
-    color: #2c3e50; /* Teks diganti jadi biru sangat gelap (lebih lembut dari hitam) */
+    color: #2c3e50; 
 }
 
 /* =========================================
    2. TYPOGRAPHY (FONT)
    ========================================= */
-/* Semua judul pakai Montserrat agar tegas */
+
 h1, h2, h3, h4, h5, h6, .tombol-nav, button, .btn-hobi {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -35,7 +35,6 @@ h2 {
     font-size: 2rem;
     color: #2c3e50;
     margin-bottom: 20px;
-    /* Variasi garis bawah judul section agar lebih stylish */
     border-left: 5px solid #c0392b; 
     padding-left: 15px;
 }
@@ -49,20 +48,19 @@ h3 {
    3. LAYOUT & CONTAINER
    ========================================= */
 #container {
-    background-color: #fdfdfd; /* Putih agak abu dikit (tidak silau) */
+    background-color: #fdfdfd; 
     width: 90%; 
     max-width: 1000px;
     margin: 40px auto; 
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.15); /* Bayangan lebih halus & lebar */
-    border-radius: 8px; /* Sudut sedikit melengkung */
-    overflow: hidden; /* Agar sudut header tidak lancip */
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15); 
+    border-radius: 8px;
+    overflow: hidden; 
 }
 
 /* =========================================
    4. HEADER
    ========================================= */
 header {
-    /* GRADASI MASKULIN: Dari Navy gelap ke Navy agak terang */
     background: linear-gradient(135deg, #1a252f, #34495e); 
     color: white;
     padding: 50px 20px;
@@ -74,7 +72,6 @@ header {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    /* Border ganda untuk efek bingkai foto */
     border: 4px solid white;
     box-shadow: 0 0 0 4px #bdc3c7; 
     object-fit: cover;
@@ -83,12 +80,12 @@ header {
 }
 
 .gambar-profil:hover {
-    transform: rotate(5deg) scale(1.05); /* Efek miring sedikit saat disentuh */
+    transform: rotate(5deg) scale(1.05); 
 }
 
 header p {
     font-size: 1.1rem;
-    color: #ecf0f1; /* Putih agak abu */
+    color: #ecf0f1;
     font-weight: 300;
 }
 
@@ -99,29 +96,33 @@ nav {
     background-color: #2c3e50;
     text-align: center;
     padding: 15px;
-    /* Sticky: Navigasi nempel di atas saat discroll */
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid #c0392b; /* Garis aksen merah di bawah menu */
+    border-bottom: 3px solid #c0392b;
 }
 
 .tombol-nav {
+    background-color: #c0392b; 
     text-decoration: none;
     color: white; 
     text-transform: uppercase;
-    padding: 8px 20px;
+    padding: 10px 25px;
     letter-spacing: 1px;
-    border: 2px solid transparent; /* Transparan dulu */
-    border-radius: 30px; /* Tombol bulat (pill shape) */
+    border: none;
+    border-radius: 5px; 
     font-size: 13px;
+    font-weight: 700;
     transition: all 0.3s ease;
+    display: inline-block; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .tombol-nav:hover {
-    background-color: white;
-    color: #c0392b; /* Berubah jadi merah bata saat hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: #e74c3c; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    color: white;
 }
 
 /* =========================================
@@ -129,7 +130,7 @@ nav {
    ========================================= */
 section {
     padding: 40px;
-    border-bottom: 1px dashed #dcdcdc; /* Garis putus-putus lebih modern */
+    border-bottom: 1px dashed #dcdcdc; 
 }
 
 section:last-child {
@@ -142,7 +143,6 @@ ul {
 
 li {
     margin-bottom: 8px;
-    /* Mengganti bullet point default dengan kotak kecil custom (Opsional) */
     list-style-type: square; 
 }
 
@@ -150,7 +150,7 @@ li {
    7. BUTTONS (TOMBOL UMUM)
    ========================================= */
 button {
-    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Gradasi Navy ke Cyan gelap */
+    background: linear-gradient(to right, #2c3e50, #4ca1af); 
     color: white;
     padding: 12px 30px;
     border: none;
@@ -165,7 +165,7 @@ button {
 }
 
 button:hover {
-    transform: translateY(-2px); /* Naik sedikit */
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     background: linear-gradient(to right, #1a252f, #2c3e50);
 }
@@ -173,12 +173,10 @@ button:hover {
 /* =========================================
    8. ELEMENTS KHUSUS ABOUT (MODERN UI)
    ========================================= */
-/* Teks Rata Kanan-Kiri */
 .teks-justify {
     text-align: justify;
 }
 
-/* Card Container */
 .card-container {
     display: flex;
     gap: 25px;
@@ -186,25 +184,22 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* Styling Card yang Lebih Modern */
 .card {
     background-color: white;
-    /* Border kiri diganti strip atas agar seperti kartu ID */
     border-top: 5px solid #2c3e50; 
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-left: 1px solid #95a5a6; 
+    border-right: 1px solid #95a5a6;
+    border-bottom: 1px solid #95a5a6;
     
     padding: 25px;
     flex: 1;
     border-radius: 8px;
-    position: relative; /* Untuk efek hover */
+    position: relative; 
     transition: all 0.3s ease;
 }
 
-/* Efek Hover Card */
 .card:hover {
-    border-top-color: #c0392b; /* Strip atas berubah merah */
+    border-top-color: #c0392b; 
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
@@ -231,19 +226,17 @@ button:hover {
     text-transform: uppercase;
 }
 
-/* Button Group Hobi */
 .button-group {
     display: flex;
     gap: 15px;
     margin-bottom: 25px;
 }
 
-/* Override style button khusus hobi agar beda */
 .btn-hobi {
-    background: white; /* Balik ke putih */
+    background: white; 
     color: #2c3e50;
     border: 2px solid #2c3e50;
-    box-shadow: none; /* Hapus bayangan default */
+    box-shadow: none;
 }
 
 .btn-hobi:hover {
@@ -252,11 +245,11 @@ button:hover {
     box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
 }
 
-/* Info Box */
+
 .info-box {
     padding: 20px;
-    border-left: 5px solid #3498db; /* Garis biru terang di kiri */
-    background-color: #eaf6ff; /* Background biru sangat muda */
+    border-left: 5px solid #3498db; 
+    background-color: #eaf6ff; 
     border-radius: 0 5px 5px 0;
     color: #2c3e50;
     font-style: italic;

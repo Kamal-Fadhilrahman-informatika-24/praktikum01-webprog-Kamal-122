@@ -1,19 +1,15 @@
-// Ambil elemen
+
 let tombol = document.getElementById("btn");
 let judul = document.getElementById("judul");
 
-// Event Listener Tombol
 tombol.addEventListener("click", function() {
     alert("Halo! Terima kasih sudah berkunjung.");
     
-    // Ubah warna tombol jadi hijau kalem saat diklik
     tombol.style.backgroundColor = "#27ae60"; 
     tombol.innerText = "Sudah Disapa";
 });
 
-// Event Listener Judul
 judul.addEventListener("click", function() {
-    // Ubah warna judul jadi aksen merah bata
     judul.style.color = "#c0392b"; 
 });
 
@@ -23,7 +19,6 @@ judul.addEventListener("click", function() {
 let tombolSapa = document.getElementById("btn");
 let judulUtama = document.getElementById("judul");
 
-// Cek apakah elemen 'btn' ada (artinya kita sedang di index.html)
 if (tombolSapa) {
     tombolSapa.addEventListener("click", function() {
         alert("Halo! Terima kasih sudah berkunjung.");
@@ -32,7 +27,6 @@ if (tombolSapa) {
     });
 }
 
-// Cek apakah elemen 'judul' ada
 if (judulUtama) {
     judulUtama.addEventListener("click", function() {
         judulUtama.style.color = "#c0392b"; 
@@ -43,8 +37,6 @@ if (judulUtama) {
    LOGIKA UNTUK HALAMAN ABOUT
    ========================================= */
 
-// 1. Fitur Pesan Otomatis berdasarkan Waktu (Manipulasi DOM)
-// Ini akan berjalan otomatis saat halaman about dimuat
 let pesanDinamis = document.getElementById("pesan-dinamis");
 
 if (pesanDinamis) {
@@ -59,16 +51,12 @@ if (pesanDinamis) {
         sapaan = "Selamat Malam! Waktunya evaluasi materi hari ini.";
     }
 
-    // Mengisi text konten ke dalam elemen <p id="pesan-dinamis">
     pesanDinamis.innerText = sapaan;
 }
 
-// 2. Fungsi untuk Mengganti Keterangan Hobi (Interaktif)
-// Fungsi ini dipanggil oleh onclick="..." di HTML
 function gantiHobi(hobi) {
     let infoBox = document.getElementById("info-hobi");
     
-    // Reset style sebentar untuk efek kedip (opsional)
     infoBox.style.opacity = 0;
 
     setTimeout(function() {
@@ -85,7 +73,7 @@ function gantiHobi(hobi) {
             infoBox.style.backgroundColor = "#badc58"; // Hijau muda
             infoBox.style.border = "1px solid #6ab04c";
         }
-        // Munculkan kembali
+
         infoBox.style.opacity = 1;
-    }, 200); // jeda 0.2 detik agar transisi terasa
+    }, 200);
 }
