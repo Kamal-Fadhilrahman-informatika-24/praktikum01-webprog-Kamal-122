@@ -1,58 +1,109 @@
+/* Reset Margin & Padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 30px;
+/* WARNA BACKGROUND MASKULIN 
+   Menggunakan warna 'Silver' (#bdc3c7) untuk latar belakang utama.
+   Tidak putih, tidak silau, memberikan kesan elegan dan kokoh.
+*/
+body {
+    background-color: #bdc3c7; 
 }
 
-.profile-img {
-    width: 120px;
+/* Container Utama */
+#container {
+    background-color: white; /* Tetap putih agar tulisan jelas dibaca */
+    width: 90%; 
+    max-width: 1000px;
+    margin: 30px auto; /* Memberi jarak atas-bawah agar background terlihat */
+    padding-bottom: 20px;
+    border: 1px solid #95a5a6; /* Garis tepi disesuaikan warnanya */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Sedikit bayangan agar timbul */
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Warna Navy Blue (Biru Gelap) - Sangat Maskulin */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gambar-profil {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    border: 5px solid #bdc3c7; /* Border disamakan dengan background body */
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
+/* Judul dan Subjudul */
+h1#judul {
+    margin-bottom: 5px;
+}
+
+/* Navigasi */
 nav {
-    background-color: #34495e;
+    background-color: #34495e; /* Warna sedikit lebih terang dari header */
     text-align: center;
     padding: 10px;
 }
 
-nav a {
-    color: white;
-    margin: 0 10px;
+.tombol-nav {
     text-decoration: none;
+    color: white; /* Teks putih di atas background gelap */
+    font-weight: bold;
+    padding: 5px 15px;
+    border: 1px solid white;
+    display: inline-block;
 }
 
+.tombol-nav:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
+/* Section (Bagian Isi) */
 section {
-    padding: 20px;
+    padding: 30px;
+    border-bottom: 1px solid #eee;
 }
 
 h2 {
-    margin-bottom: 10px;
-    color: #2c3e50;
+    color: #2c3e50; /* Judul section mengikuti warna tema utama */
+    margin-bottom: 15px;
+    border-left: 5px solid #c0392b; /* Aksen Merah Gelap (Opsional) untuk tegas */
+    padding-left: 10px;
 }
 
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 5px;
+    color: #333; /* Warna teks isi abu gelap */
+}
+
+/* Tombol Aksi */
 button {
-    padding: 10px 15px;
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Navy Blue */
     color: white;
+    padding: 12px 25px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 3px; /* Sudut sedikit kotak agar tegas */
+    transition: 0.3s;
 }
 
-.back {
-    display: block;
-    margin: 20px;
-    text-decoration: none;
-    color: #2c3e50;
+button:hover {
+    background-color: #1a252f; /* Warna lebih gelap saat disentuh */
 }
