@@ -73,15 +73,15 @@ function gantiHobi(hobi) {
 
     setTimeout(function() {
         if (hobi === 'Coding') {
-            infoBox.innerText = "Saya suka memecahkan masalah logika dan membangun website yang responsif menggunakan HTML, CSS, dan JS.";
+            infoBox.innerText = "Coding merupakan hobi sekaligus sarana belajar utama bagi saya. Melalui aktivitas ini, saya dapat melatih kemampuan berpikir logis, problem solving, dan memahami cara kerja sebuah sistem. Saya menikmati proses menulis kode, mencoba hal baru, serta memperbaiki kesalahan (debugging) karena dari situlah saya banyak belajar dan berkembang sebagai mahasiswa informatika.";
             infoBox.style.backgroundColor = "#dff9fb"; // Biru muda
             infoBox.style.border = "1px solid #22a6b3";
         } else if (hobi === 'Gaming') {
-            infoBox.innerText = "Bermain game strategi melatih kemampuan saya dalam mengambil keputusan cepat dan kerja sama tim.";
+            infoBox.innerText = "Gaming menjadi salah satu cara saya untuk mengisi waktu luang sekaligus melatih fokus dan strategi berpikir. Dari bermain game, saya belajar tentang pengambilan keputusan, kerja sama tim, serta manajemen emosi. Aktivitas ini juga membantu saya menjaga keseimbangan antara belajar dan hiburan agar tetap produktif.";
             infoBox.style.backgroundColor = "#ff7979"; // Merah muda
             infoBox.style.border = "1px solid #eb4d4b";
         } else if (hobi === 'Reading') {
-            infoBox.innerText = "Membaca buku teknologi dan fiksi ilmiah membuka wawasan saya terhadap perkembangan masa depan.";
+            infoBox.innerText = "Membaca adalah hobi yang membantu saya memperluas wawasan, baik dalam bidang teknologi maupun pengetahuan umum. Saya senang membaca artikel, dokumentasi, maupun konten edukatif yang berkaitan dengan informatika. Melalui membaca, saya dapat memahami konsep baru, mendapatkan sudut pandang berbeda, dan terus memperkaya pengetahuan saya.";
             infoBox.style.backgroundColor = "#badc58"; // Hijau muda
             infoBox.style.border = "1px solid #6ab04c";
         }
