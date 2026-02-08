@@ -2,44 +2,69 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Tentang Saya</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Kamal Fadhilrahman</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Tentang Saya</h1>
-    <p>Halaman Lanjutan Portofolio</p>
-</header>
+    <div id="container">
+        
+        <header>
+            <h1 id="judul-about">Tentang Kamal</h1>
+            <p>Perjalanan Pendidikan & Minat</p>
+        </header>
 
-<nav>
-    <a href="index.html">← Previous</a>
-    <a href="index.html#contact">Contact</a>
-</nav>
+        <nav>
+            <a href="index.html" class="tombol-nav">&larr; Kembali ke Home</a>
+        </nav>
 
-<section>
-    <h2>Profil Singkat</h2>
-    <p>
-        Saya adalah mahasiswa Teknik Informatika yang sedang mempelajari
-        Pemrograman Web, khususnya HTML, CSS, dan JavaScript.
-    </p>
-</section>
+        <section id="bio">
+            <h2>Biografi</h2>
+            <p class="teks-justify">
+                Halo! Nama saya <strong>Kamal Fadhilrahman</strong>. Saya adalah seorang mahasiswa Teknik Informatika angkatan 24 yang memiliki semangat tinggi dalam mempelajari teknologi web modern. 
+                Selain coding, saya juga aktif mengeksplorasi desain UI/UX untuk menciptakan pengalaman pengguna yang baik.
+            </p>
+            <p id="pesan-dinamis" style="margin-top: 10px; font-weight: bold; color: #2c3e50;"></p>
+        </section>
 
-<section>
-    <h2>Tujuan</h2>
-    <p>
-        Tujuan saya adalah mampu membuat website statis dan interaktif
-        yang siap dikembangkan ke tahap server-side.
-    </p>
-</section>
+        <section id="education">
+            <h2>Riwayat Pendidikan</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>SMA/SMK</h3>
+                    <p>Jurusan IPA / RPL</p>
+                    <span class="tahun">2021 - 2024</span>
+                </div>
+                <div class="card">
+                    <h3>Universitas</h3>
+                    <p>Teknik Informatika</p>
+                    <span class="tahun">2024 - Sekarang</span>
+                </div>
+            </div>
+        </section>
 
-<section>
-    <h2>Harapan</h2>
-    <p>
-        Website ini dibuat sebagai tugas praktikum Client-Side Scripting
-        sesuai dengan modul yang diberikan dosen.
-    </p>
-</section>
+        <section id="hobbies">
+            <h2>Hobi & Minat</h2>
+            <p>Klik tombol di bawah untuk melihat detail hobi saya:</p>
+            
+            <div class="button-group">
+                <button class="btn-hobi" onclick="gantiHobi('Coding')">💻 Coding</button>
+                <button class="btn-hobi" onclick="gantiHobi('Gaming')">🎮 Gaming</button>
+                <button class="btn-hobi" onclick="gantiHobi('Reading')">📚 Membaca</button>
+            </div>
 
+            <div id="info-hobi" class="info-box">
+                Silakan pilih hobi di atas.
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 20px; color: #7f8c8d; font-size: 14px;">
+            &copy; 2026 Kamal Fadhilrahman - Praktikum Web Prog
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

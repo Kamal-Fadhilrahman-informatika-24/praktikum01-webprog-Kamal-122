@@ -107,3 +107,86 @@ button {
 button:hover {
     background-color: #1a252f; /* Warna lebih gelap saat disentuh */
 }
+
+/* =========================================
+   TAMBAHAN UNTUK HALAMAN ABOUT (MODERN UI)
+   ========================================= */
+
+/* Gaya Justify untuk teks panjang */
+.teks-justify {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Container untuk Kartu Pendidikan (Flexbox) */
+.card-container {
+    display: flex;
+    gap: 20px; /* Jarak antar kartu */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Agar responsif di HP */
+}
+
+/* Desain Kartu (Modern & Berkelas) */
+.card {
+    background-color: #ecf0f1; /* Abu-abu sangat muda */
+    border-left: 5px solid #2c3e50; /* Aksen Navy */
+    padding: 20px;
+    flex: 1; /* Lebar otomatis rata */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan halus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover pada Kartu (Interaktif) */
+.card:hover {
+    transform: translateY(-5px); /* Naik sedikit saat disentuh kursor */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.card h3 {
+    color: #c0392b; /* Aksen Merah Bata */
+    margin-bottom: 5px;
+}
+
+.tahun {
+    display: inline-block;
+    background-color: #bdc3c7;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Group Tombol Hobi */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-hobi {
+    background-color: white;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    padding: 8px 20px;
+    margin-top: 0; /* Override margin button default */
+    font-weight: bold;
+}
+
+.btn-hobi:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Kotak Info Hobi Dinamis */
+.info-box {
+    padding: 15px;
+    border: 1px dashed #95a5a6;
+    background-color: #f7f9f9;
+    border-radius: 5px;
+    font-style: italic;
+    color: #555;
+    transition: all 0.3s;
+}

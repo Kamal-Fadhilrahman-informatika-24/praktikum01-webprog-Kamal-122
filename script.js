@@ -16,3 +16,76 @@ judul.addEventListener("click", function() {
     // Ubah warna judul jadi aksen merah bata
     judul.style.color = "#c0392b"; 
 });
+
+/* =========================================
+   LOGIKA UNTUK HALAMAN INDEX (HOME)
+   ========================================= */
+let tombolSapa = document.getElementById("btn");
+let judulUtama = document.getElementById("judul");
+
+// Cek apakah elemen 'btn' ada (artinya kita sedang di index.html)
+if (tombolSapa) {
+    tombolSapa.addEventListener("click", function() {
+        alert("Halo! Terima kasih sudah berkunjung.");
+        tombolSapa.style.backgroundColor = "#27ae60"; 
+        tombolSapa.innerText = "Sudah Disapa";
+    });
+}
+
+// Cek apakah elemen 'judul' ada
+if (judulUtama) {
+    judulUtama.addEventListener("click", function() {
+        judulUtama.style.color = "#c0392b"; 
+    });
+}
+
+/* =========================================
+   LOGIKA UNTUK HALAMAN ABOUT
+   ========================================= */
+
+// 1. Fitur Pesan Otomatis berdasarkan Waktu (Manipulasi DOM)
+// Ini akan berjalan otomatis saat halaman about dimuat
+let pesanDinamis = document.getElementById("pesan-dinamis");
+
+if (pesanDinamis) {
+    let jam = new Date().getHours();
+    let sapaan;
+
+    if (jam < 12) {
+        sapaan = "Selamat Pagi! Semangat belajar coding hari ini.";
+    } else if (jam < 18) {
+        sapaan = "Selamat Siang/Sore! Jangan lupa istirahat sejenak.";
+    } else {
+        sapaan = "Selamat Malam! Waktunya evaluasi materi hari ini.";
+    }
+
+    // Mengisi text konten ke dalam elemen <p id="pesan-dinamis">
+    pesanDinamis.innerText = sapaan;
+}
+
+// 2. Fungsi untuk Mengganti Keterangan Hobi (Interaktif)
+// Fungsi ini dipanggil oleh onclick="..." di HTML
+function gantiHobi(hobi) {
+    let infoBox = document.getElementById("info-hobi");
+    
+    // Reset style sebentar untuk efek kedip (opsional)
+    infoBox.style.opacity = 0;
+
+    setTimeout(function() {
+        if (hobi === 'Coding') {
+            infoBox.innerText = "Saya suka memecahkan masalah logika dan membangun website yang responsif menggunakan HTML, CSS, dan JS.";
+            infoBox.style.backgroundColor = "#dff9fb"; // Biru muda
+            infoBox.style.border = "1px solid #22a6b3";
+        } else if (hobi === 'Gaming') {
+            infoBox.innerText = "Bermain game strategi melatih kemampuan saya dalam mengambil keputusan cepat dan kerja sama tim.";
+            infoBox.style.backgroundColor = "#ff7979"; // Merah muda
+            infoBox.style.border = "1px solid #eb4d4b";
+        } else if (hobi === 'Reading') {
+            infoBox.innerText = "Membaca buku teknologi dan fiksi ilmiah membuka wawasan saya terhadap perkembangan masa depan.";
+            infoBox.style.backgroundColor = "#badc58"; // Hijau muda
+            infoBox.style.border = "1px solid #6ab04c";
+        }
+        // Munculkan kembali
+        infoBox.style.opacity = 1;
+    }, 200); // jeda 0.2 detik agar transisi terasa
+}
